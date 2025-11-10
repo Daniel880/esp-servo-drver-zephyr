@@ -1,0 +1,26 @@
+{
+    "name": "ESP Servo Driver Zephyr",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "openai.chatgpt"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "runArgs": [
+        "--privileged"
+    ],
+    "mounts": [
+        "source=/dev,target=/dev,type=bind"
+    ]
+}
